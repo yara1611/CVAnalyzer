@@ -38,6 +38,8 @@ job_text=clean_text(job_text)
 with open('Scripts\data.json', 'r') as file:
     skill_aliases = json.load(file)
 
+##ADD SCRAPING FOR JOB DESCRIPTIONS LATER
+##ADD MORE SKILLS TO THE JSON FILE LATER
 
 def extract_skills(text, skill_aliases):
     found_skills=[]
