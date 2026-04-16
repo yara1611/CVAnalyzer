@@ -11,8 +11,9 @@ def read_docx(file_path):
     return text
 
 file_path = sys.argv[1]
+job_text = sys.argv[2]
 text=read_docx(file_path)
-job_text = "We are looking for a backend engineer with experience in Python, Django, Docker, and AWS. Knowledge of SQL and Kubernetes is a plus."
+
 
 ##print(repr(text))
 

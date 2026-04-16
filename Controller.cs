@@ -49,10 +49,10 @@ public class ResultsController : ControllerBase
         return Ok(new { name = file.FileName, size = file.Length });
     }
 
-    [HttpGet("extract-text/{fileName}")]
-    public IActionResult ExtractTextFromDocx(string fileName)
+    [HttpGet("extract-text/{fileName}&{jobDescription}")]
+    public IActionResult ExtractTextFromDocx(string fileName, string jobDescription)
     {
-        string rawResult = CallPythonScript("Uploads/" + fileName);
+        string rawResult = CallPythonScript("Uploads/" + fileName, jobDescription);
         if(string.IsNullOrEmpty(rawResult))
         {
             return BadRequest("Failed to extract text from the document.");
@@ -77,12 +77,23 @@ public class ResultsController : ControllerBase
         }
         
     }
-    public string CallPythonScript(string filePath)
+    
+    [HttpGet("files")]
+    public List<string> UploadedFiles()
+    {
+        string uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        if (!Directory.Exists(uploadsDirectory))
+        {
+            return new List<string>();
+        }
+        return Directory.GetFiles(uploadsDirectory).Select(Path.GetFileName).ToList();
+    }
+    public string CallPythonScript(string filePath, string jobDescription)
     {
         var start = new ProcessStartInfo
         {
             FileName = "python3",
-            Arguments = $"Scripts/script.py \"{filePath}\"",
+            Arguments = $"Scripts/script.py \"{filePath}\" \"{jobDescription}\"",
             UseShellExecute = false,
             RedirectStandardOutput = true,
             CreateNoWindow = true
