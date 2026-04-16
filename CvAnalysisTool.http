@@ -1,0 +1,6 @@
+@CvAnalysisTool_HostAddress = http://localhost:5053
+
+GET {{CvAnalysisTool_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,49 @@
+{
+  "python": [
+    "python"
+  ],
+  "java": [
+    "java"
+  ],
+  "c++": [
+    "c++"
+  ],
+  "react": [
+    "react",
+    "reactjs",
+    "react.js"
+  ],
+  "angular": [
+    "angular",
+    "angularjs",
+    "angular.js"
+  ],
+  "sql": [
+    "sql"
+  ],
+  "docker": [
+    "docker"
+  ],
+  "git": [
+    "git",
+    "github"
+  ],
+  "node": [
+    "node",
+    "nodejs",
+    "node.js"
+  ],
+  "c#": [
+    "c#",
+    "c sharp"
+  ],
+  ".net": [
+    ".net",
+    "dotnet",
+    "dot net"
+  ],
+  "javascript": [
+    "javascript",
+    "js"
+  ]
+}
