@@ -1,63 +1,99 @@
-   
-   
+   body {
+       margin: 20px;
+   }
+
    .upload-form {
-            border: solid 1px #e0e0e0;
-            border-radius: 8px;
-            padding: 30px;
-            width: 350px;
-            display: flex;
+       border: solid 1px #e0e0e0;
+       border-radius: 8px;
+       padding: 30px;
+       width: 350px;
+       display: flex;
 
-            gap: 15px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            /* Subtle depth */
-        }
+       gap: 15px;
+       background-color: #ffffff;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+       /* Subtle depth */
+   }
 
-        .upload-form input[type="file"] {
-            padding: 10px;
-            border: dashed 2px #ccc;
-            /* Makes it look like a drop zone */
-            border-radius: 5px;
-            cursor: pointer;
-        }
+   .upload-form input[type="file"] {
+       padding: 10px;
+       border: dashed 2px #ccc;
+       /* Makes it look like a drop zone */
+       border-radius: 5px;
+       cursor: pointer;
+   }
 
-        .upload-form button {
-            background-color: #007bff;
-            /* Standard "Action" blue */
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+   .upload-form button {
+       background-color: #007bff;
+       /* Standard "Action" blue */
+       color: white;
+       border: none;
+       padding: 10px;
+       border-radius: 5px;
+       font-weight: bold;
+       cursor: pointer;
+       transition: background-color 0.2s;
+   }
 
-        .upload-form button:hover {
-            background-color: #0056b3;
-        }
+   .upload-form button:hover {
+       background-color: #0056b3;
+   }
 
-        .file-list > div{
-            background-color: #f8f9fa;
-            /* Light gray for file items */
-            border: solid 1px #e0e0e0;
-            border-radius: 5px;
-            padding: 10px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 350px;
-        }
-        .file-list > div:hover {
-            background-color: #e9ecef;
-            /* Slightly darker on hover */
-        }
-        #job-desc {
-            width: 350px;
-            height: 100px;
-            border: solid 1px #e0e0e0;
-            border-radius: 5px;
-            padding: 10px;
-            
-        }
+   .file-list>div {
+       background-color: #f8f9fa;
+       /* Light gray for file items */
+       border: solid 1px #e0e0e0;
+       border-radius: 5px;
+       padding: 10px;
+       margin-top: 10px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 350px;
+   }
+
+   .file-list {
+       flex: 0 0 300px;
+   }
+
+   .file-list>div:hover {
+       background-color: #e9ecef;
+       /* Slightly darker on hover */
+   }
+
+   #job-desc {
+       width: 350px;
+       height: 100px;
+       border: solid 1px #e0e0e0;
+       border-radius: 5px;
+       padding: 30px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+   }
+
+   .analysis-results {
+       border: solid 1px #e0e0e0;
+       border-radius: 8px;
+       padding: 30px;
+       max-width: max-content;
+       flex: 1;
+       max-height: max-content;
+       min-width: 300px;
+       min-height: 250px;
+   }
+
+
+   .row {
+       display: flex;
+       gap: 20px;
+       padding-top: 20px;
+       min-height: 80vh;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+   .column {
+       background: #ffffff;
+       border: 1px solid #e0e0e0;
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+   }
