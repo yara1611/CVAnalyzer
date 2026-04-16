@@ -45,5 +45,12 @@
   "javascript": [
     "javascript",
     "js"
+  ],
+  "cloud": [
+    "cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "google cloud"
   ]
 }

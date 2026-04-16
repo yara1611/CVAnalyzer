@@ -12,6 +12,8 @@ def read_docx(file_path):
 
 file_path = sys.argv[1]
 text=read_docx(file_path)
+job_text = "We are looking for a backend engineer with experience in Python, Django, Docker, and AWS. Knowledge of SQL and Kubernetes is a plus."
+
 ##print(repr(text))
 
 ##CLEANING THE TEXT
@@ -25,8 +27,9 @@ def clean_text(text):
     # normalize spaces
     text = " ".join(text.split())
     return text
-text=clean_text(text)
 
+text=clean_text(text)
+job_text=clean_text(job_text)
 
 ##Test Skill Detection
 ##print("python" in text)
@@ -45,7 +48,7 @@ def extract_skills(text, skill_aliases):
                 break
     return found_skills
 cv_skills = extract_skills(text, skill_aliases)
-job_skills = ["Python", "Java", "JavaScript", "C++", "SQL", "React", "Angular", "Node.js","Git", "Docker", "Jenkins"]
+job_skills = extract_skills(job_text, skill_aliases)
 job_skills=[s.lower() for s in job_skills]
 
 
